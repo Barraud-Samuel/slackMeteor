@@ -7,9 +7,34 @@ Template.footer.events({
         //on recupère la valeurs de l'input
         const text = event.target.text.value;
         console.log(text)
-        //on insère l résultat de l'inpout dans le html (plus tard dans la bdd)
-        $('.message-history').append('<div class="message"><a href="" class="message_profile-pic"></a><a href="" class="message_username">scotch</a><span class="message_timestamp">1:31 AM</span><span class="message_star"></span><span class="message_content">' + text + '</span></div>');
-        //ensuite on efface le texte qui reste dans le input
-        event.target.text.value= "";
+        if (!!text){
+            //on insère l résultat de l'inpout dans le html (plus tard dans la bdd)
+            Messages.insert({text, createdAt: new Date(),});
+            //ensuite on efface le texte qui reste dans le input
+            event.target.text.value= "";
+        }
     }
 });
+
+
+
+
+
+
+/*autre exemple avec jquery*/
+
+/*
+Template.footer.events({
+    'keypress input': function(e) {
+        var inputVal = $('.input-box_text').val();
+        if(!!inputVal) {
+            var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
+            if (charCode == 13) {
+                e.stopPropagation();
+                Messages.insert({text: $('.input-box_text').val()});
+                $('.input-box_text').val("");
+                return false;
+            }
+        }
+    }
+});*/

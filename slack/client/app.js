@@ -1,4 +1,10 @@
 Template.messages.helpers({
+    messages: Messages.find({})
+});
+
+
+/*
+Template.messages.helpers({
     messages: [
         { text: "All these messages" },
         { text: "Uses the same template" },
@@ -8,4 +14,4 @@ Template.messages.helpers({
         { text: "What's up man!" },
         { text: "Hello" }
     ]
-});
+});*/
