@@ -21,3 +21,15 @@ autopublish@1.0.7             # Publish all data to the clients (for prototyping
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
 anti:fake
 dburles:factory
+accounts-base
+accounts-password
+accounts-ui
+accounts-github
+accounts-facebook
+accounts-twitter
+accounts-google
+twitter-config-ui
+google-config-ui
+facebook-config-ui
+github-config-ui
+email

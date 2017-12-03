@@ -1,7 +1,10 @@
 Template.messages.helpers({
     messages: Messages.find({})
 });
-
+//parametrage des comptes utilisateurs (account ui)
+Accounts.ui.config({
+    passwordSignupFields: 'USERNAME_ONLY'
+});
 
 /*
 Template.messages.helpers({
